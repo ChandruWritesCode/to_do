@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           colorSchemeSeed: Colors.amber,
         ),
-        home: HomePage(),
+        home: const HomePage(),
       ),
     );
   }

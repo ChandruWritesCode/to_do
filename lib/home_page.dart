@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
                 }
               }
             },
-            icon: Icon(Icons.sync),
+            icon: const Icon(Icons.sync),
           ),
         ],
       ),
@@ -45,11 +45,11 @@ class _HomePageState extends State<HomePage> {
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  title: Text("Add Task"),
+                  title: const Text("Add Task"),
                   content: TextField(
                     autofocus: true,
                     controller: _cont,
-                    decoration: InputDecoration(hint: Text("your task")),
+                    decoration: const InputDecoration(hint: Text("your task")),
                   ),
                   actions: [
                     TextButton(
@@ -58,25 +58,25 @@ class _HomePageState extends State<HomePage> {
                         Navigator.of(context).pop();
                         _cont.clear(); // setState
                       },
-                      child: Text("add"),
+                      child: const Text("add"),
                     ),
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                         _cont.clear();
                       },
-                      child: Text("cancel"),
+                      child: const Text("cancel"),
                     ),
                   ],
                 );
               },
             );
           },
-          child: Icon(Icons.add, size: 40),
+          child: const Icon(Icons.add, size: 40),
         ),
       ),
       body: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         child: ListView.builder(
           itemCount: context.watch<TasksProvider>().tasks.length,
           itemBuilder: (context, idx) {
@@ -105,7 +105,7 @@ class _TaskCardState extends State<TaskCard> {
       elevation: 20,
       child: Container(
         height: 80,
-        margin: EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           children: [
             Checkbox(
